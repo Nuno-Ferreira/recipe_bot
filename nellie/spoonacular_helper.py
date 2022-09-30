@@ -54,7 +54,7 @@ class SpoonacularFacade(object):
         code = content.get("code")
         message = content.get("message")
 
-        if status = "failure" and code = 402:
+        if status == "failure" and code = 402:
             raise exceptions.QuotaError(message)
 
     def get_recipe_ids_for_ingredients(self, ingredients, limit=config.RECIPE_LIMIT):
